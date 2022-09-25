@@ -1,0 +1,30 @@
+<div class="destination-container">
+    <div class="container">
+      <h1 class="text-center mb-5">TOP DESTINATIONS</h1>
+      <div class="row">
+        <div class="col-lg-4 mb-5 text-white" *ngFor="let Destination of Destinations" [ngClass]="{'col-lg-8' : Destination.id == 1}" >
+          <div class="card">
+              <img src="{{Destination.img}}" class="card-img" alt="place-photo">
+              <div class="card-img-overlay d-flex flex-column justify-content-between">
+                  <div>
+                      <button>
+                  <img src="./assets/ship.png" alt="ship-icon" >
+                  {{Destination.boats.length}}</button>
+                  </div>
+                <div>
+                  <h3 class="card-text ">{{Destination.city}}</h3>
+                <p class="card-text">{{Destination.country}}</p>
+                </div>
+                
+              </div>
+              
+            </div>
+        </div>
+        <div class="explore-more d-flex justify-content-center mb-5">
+          <button class="w-25" [disabled]="isDisabled" (click)="handleClick()">EXPLORE MORE</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  

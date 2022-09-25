@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+@import "bootstrap";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+@font-face {
+    font-family: "Raleway";
+    src: url(./assets/Raleway/Raleway-VariableFont_wght.ttf) format("truetype");
+}
+
+
+body{
+    font-family: Raleway;
+}

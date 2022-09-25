@@ -1,0 +1,55 @@
+
+.add-boat {
+    background-color: #f6f6f6;
+    padding: 7rem 0 7rem 0;
+    .container {
+      width: 50%;
+      background-color: rgb(225, 225, 225);
+      border-radius: 0.5rem;
+      padding: 5rem;
+      h1{
+          color: #e7434e;
+      }
+      .img-container{
+          width: 100%;
+          border: .2rem rgb(157, 161, 220) dashed;
+          padding: 1rem;
+          border-radius: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          height: 35vh;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .info-container {
+          width: 100%;
+          .row{
+              margin: 0 0 1rem 0;
+              input{
+                  height: 3rem;
+              }
+              label{
+                  font-weight: 600;
+                  padding: 0 0 0.5rem 0;
+              }
+          }
+        }
+        .btn-div {
+          width: 100%;
+          margin: 3rem 0 0 0;
+          button {
+              width: 40%;
+            padding: 1rem;
+            background-color: #e7434e;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  

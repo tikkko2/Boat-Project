@@ -1,0 +1,100 @@
+<div class="signup-container">
+  <div class="container">
+    <div class="signup-form p-2">
+      <form (ngSubmit)="submit()">
+        <h2 class="text-center">SIGN UP</h2>
+        <p class="text-center mb-5">
+          Please fill in this form to create an account!
+        </p>
+        <div class="form-group">
+          <div class="row">
+
+            <div *ngIf="(name.invalid  && name.touched) || (surname.invalid && surname.touched)" class="text-danger">
+              Name and surname fields must be valid
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                name="name"
+                placeholder="First Name"
+                required
+                [(ngModel)]="form.name" #name="ngModel"
+              />
+            </div>
+
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                name="surname"
+                placeholder="Last Name"
+                required #surname="ngModel"
+                [(ngModel)]="form.surname"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div *ngIf="email.invalid && email.touched" class="text-danger">
+          Email field must be valid
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            placeholder="Email"
+            #email="ngModel"
+            required="required"
+            [(ngModel)]="form.email"
+          />
+        </div>
+
+        <div *ngIf="password.invalid && password.touched" class="text-danger">
+            Password field must be valid
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            placeholder="Password"
+            required #password="ngModel"
+            [(ngModel)]="form.password"
+          />
+        </div>
+
+        <div *ngIf="repeatedPassword.invalid && repeatedPassword.touched" class="text-danger">
+          Confirm Password field must be valid
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control"
+            name="repeatedPassword"
+            placeholder="Confirm Password"
+            required #repeatedPassword="ngModel"
+            [(ngModel)]="form.repeatedPassword"
+          />
+        </div>
+        
+        <div class="form-group mt-4">
+          <p class="small text-center">
+            By clicking the Sign Up button, you agree to our <br /><a href="#"
+              >Terms &amp; Conditions</a
+            >, and <a href="#">Privacy Policy</a>.
+          </p>
+        </div>
+        <div class="form-group d-flex justify-content-center mt-5">
+          <button type="submit" class="btn btn-primary btn-lg"><ng-container *ngIf="isLoading()">
+            Loading...
+        </ng-container>
+        <ng-container *ngIf="!isLoading()">
+            SUBMIT
+        </ng-container></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

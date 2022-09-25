@@ -1,0 +1,25 @@
+.destination-container {
+  padding: 4rem 0 0 0;
+  background-color: #f6f6f6;
+  .container {
+    width: 60%;
+    h1 {
+      color: #e7434e;
+    }
+    .col-lg-4, .col-lg-8 {
+      border: none;
+      button {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #e7434e;
+        border: none;
+        width: 25%;
+        max-width: 5rem;
+        padding: 0.4rem;
+        border-radius: 0.5rem;
+        color: white;
+      }
+    }
+  }
+}

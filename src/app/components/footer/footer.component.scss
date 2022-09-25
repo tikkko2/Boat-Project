@@ -1,0 +1,34 @@
+.footer-container{
+    background-color: #404040;
+    color: white;
+    .container{
+        width: 60%;
+        .locations, .boats{
+            width: 20%;
+        }
+        .subscribe{
+            width: 40%;
+            input{
+                width: 60%;
+                border-radius: 0.3rem 0 0 0.3rem;
+            }
+            button{
+                width: 30%;
+                border-radius: 0 0.3rem 0.3rem 0;
+                background-color: #e7434e;
+                color: white;
+            }
+            .icons > div{
+                background-color: gray;
+                border-radius: 50%;
+                width: 2.5rem;
+                height: 2.5rem;
+                margin: 2rem 1.5rem 0 0;
+            }
+        }
+        .contact{
+            width: 20%;
+        }
+
+    }
+}
