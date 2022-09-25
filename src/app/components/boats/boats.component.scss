@@ -1,0 +1,27 @@
+.boat-container {
+    padding: 4rem 0 2rem 0;
+    background-color: #ddedf2;
+    .container {
+      width: 60%;
+      h1 {
+        color: #e7434e;
+      }
+      .col-lg-6 {
+        cursor: pointer;
+        border: none;
+        button {
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          background-color: #e7434e;
+          border: none;
+          width: 25%;
+          max-width: 6rem;
+          padding: 0.4rem;
+          border-radius: 0.5rem;
+          color: white;
+        }
+      }
+    }
+  }
+  

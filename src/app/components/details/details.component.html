@@ -1,1 +1,43 @@
-<p>details works!</p>
+<div class="detail-container">
+  <div class="container w-75">
+    <div class="panel-body row">
+      <div class="col-md-6">
+        <img [src]="Boats.img" alt="Boat-photo"/>
+      </div>
+
+      <div class="col-md-6 d-flex flex-column justify-content-between">
+        <h1 >{{Boats.name}}</h1>
+        <p>
+          Praesent ac condimentum felis. Nulla at nisl orci, at dignissim dolor,
+          The best product descriptions address your ideal buyer directly and
+          personally. The best product descriptions address your ideal buyer
+          directly and personally. Praesent ac condimentum felis. 
+        </p>
+
+        <div class="row">
+            <div class="col-md-4">
+                <p> <b>ID:</b> {{Boats.id}}  </p>
+              </div>
+
+              <div class="col-md-8">
+                <p> <b>City, Country:</b> {{Boats.city}}, {{Boats.country}}  </p>
+              </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <p> <b>Price:</b> {{Boats.amount | currency : 'EUR' : 'symbol' : '3.0'}}  </p>
+          </div>
+
+          <div class="col-md-8">
+            <p><b>Quantity:</b> {{Boats.quantity}} </p>
+          </div>
+        </div>
+
+        <button class="btn btn-round mt-4 w-50 align-self-center" type="button">
+          <i class="fa fa-shopping-cart"></i> RESERVE
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

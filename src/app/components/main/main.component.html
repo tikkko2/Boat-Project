@@ -55,19 +55,8 @@
   
   <div class="destination-container">
     <div class="container">
-      <h1 class="text-center mb-5">TOP DESTINATIONS</h1>
       <div class="row">
-        <!-- <div class="col-lg-8 mb-5" *ngFor="let Destination of Destinations; index as i; first as isFirst">
-          <div class="card text-bg-dark">
-              <img src="{{Destination.img}}" class="card-img" alt="...">
-              <div class="card-img-overlay">
-                <h5 class="card-title">Card title</h5>
-                <h3 class="card-text">{{i}}</h3>
-                <p class="card-text">{{Destination.country}}</p>
-              </div>
-            </div>
-        </div> -->
-        <!-- <div class="col-lg-4 mb-5 text-white" *ngFor="let Destination of Destinations" [ngClass]="{'col-lg-8' : Destination.id == 1}" >
+        <div class="col-lg-4 mb-5 text-white" *ngFor="let Destination of Destinations" [ngClass]="{'col-lg-8' : Destination.id == 1}" >
           <div class="card">
               <img src="{{Destination.img}}" class="card-img" alt="place-photo">
               <div class="card-img-overlay d-flex flex-column justify-content-between">
@@ -80,11 +69,12 @@
                   <h3 class="card-text ">{{Destination.city}}</h3>
                 <p class="card-text">{{Destination.country}}</p>
                 </div>
-                
               </div>
-              
             </div>
-        </div> -->
+        </div>
+        <div class="explore-more d-flex justify-content-center mb-5">
+          <button class="w-25" >EXPLORE MORE DESTINATIONS</button>
+        </div> 
       </div>
     </div>
   </div>
@@ -105,3 +95,39 @@
        
     </div>
   </div>
+
+  <div class="boat-container">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mb-5 text-white" *ngFor="let Boat of Boats" [routerLink]="['/post/' + Boat.id]">
+          <div class="card" >
+            <img src="{{ Boat.img }}" class="card-img" alt="place-photo" />
+            <div
+              class="card-img-overlay d-flex flex-column justify-content-between"
+            >
+              <div>
+                <button>
+                  {{ Boat.amount | currency : 'EUR' : 'symbol' : '3.0'}} / day
+                </button>
+              </div>
+              <div>
+                <h3 class="card-text">{{ Boat.name }}</h3>
+                <div class="d-flex">
+                  <p class="card-text">{{ Boat.city }}, {{ Boat.country }}</p>
+                  <p class="mx-5">{{ Boat.quantity }} Berths</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+        <!-- <div class="explore-more d-flex justify-content-center mb-5">
+            <button class="w-25" [disabled]="isDisabled" (click)="handleClick()">EXPLORE MORE</button>
+          </div>  -->
+       <div class="load-more d-flex justify-content-center mb-5">
+            <button class="w-25" >LOAD MORE BOATS</button>
+          </div> 
+
+      </div>
+    </div>
+  </div>
+  

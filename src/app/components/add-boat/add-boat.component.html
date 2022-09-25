@@ -1,10 +1,10 @@
 <div class="add-boat">
     <div class="container">
       <h1 class="text-center mb-4">ADD YOUR BOAT</h1>
-      <form>
+      <form >
         <div class="img-container mb-4">
           <p>upload photo</p>
-          <input type="file">
+          <input type="file" name="img">
         </div>
         <div class="info-container">
           <div class="row">
@@ -13,7 +13,7 @@
               <input
                 type="text"
                 class="form-control"
-                id="name"
+                id="name" name="name"
                 placeholder="Delphia 47"
               />
             </div>
@@ -25,7 +25,7 @@
               <input
                 type="text"
                 class="form-control"
-                id="city"
+                id="city" name="city"
                 placeholder="Portofino"
               />
             </div>
@@ -34,7 +34,7 @@
               <input
                 type="text"
                 class="form-control"
-                id="country"
+                id="country" name="country"
                 placeholder="Italy"
               />
             </div>
@@ -46,7 +46,7 @@
               <input
                 type="number"
                 class="form-control"
-                id="price"
+                id="price" name="price"
                 placeholder="123"
               />
             </div>
@@ -56,14 +56,14 @@
               <input
                 type="number"
                 class="form-control"
-                id="quantity"
+                id="quantity" name="quantity"
                 placeholder="1"
               />
             </div>
           </div>
         </div>
         <div class="btn-div d-flex justify-content-center">
-          <button type="submit" class="btn">ADD</button>
+          <button class="btn">ADD</button>
         </div>
       </form>
     </div>
